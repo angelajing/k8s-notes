@@ -1,0 +1,22 @@
+参考文档：<br>
+https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+
+### Namespaces
+
+- 操作
+``` 
+$ kubectl get namespace
+$ kubectl get pods --namespace= [NAMESAPCE_NAME]
+$ kubectl config set-context --current --namespace= [NAMESAPCE_NAME]
+$ kubectl config view | grep namesapce
+// 同一个命名空间
+$ kubectl api-resources --namespaced=true
+// 不同的命名空间
+$ kubectl api-resources --namespaced=false
+```
+
+================= Q&A ====================
+
+*1.何时使用多个命名空间？*
+ - dev, pre, test, prod
+
